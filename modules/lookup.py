@@ -42,6 +42,7 @@ class LookupCog(commands.Cog):
             result_embed_desc = ''
             if result == None:
                 await ctx.send('oof no callsign found')
+                await ctx.send('Try QRZ: https://www.qrz.com/db/' + callsign)
                 return
             elif result.source == 'Callook':
                 result_embed_desc += self.format_for_callook(result)
